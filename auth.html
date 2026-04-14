@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHLOX | Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+    <div class="auth-wrapper">
+        <div class="auth-container">
+            <div class="logo">E-Commerce demo</div>
+            
+            <div id="login-form">
+                <h2>Login to Your Account</h2>
+                <input type="email" id="auth-email" placeholder="Email Address">
+                <input type="password" id="auth-password" placeholder="Password">
+                <button class="shop-btn" onclick="handleAuth('login')">Sign In</button>
+                <p>New here? <span class="toggle-link" onclick="toggleForm('register')">Create an Account</span></p>
+            </div>
+
+            <div id="register-form" style="display: none;">
+                <h2>Create Account</h2>
+                <input type="text" id="reg-name" placeholder="Full Name">
+                <input type="email" id="reg-email" placeholder="Email Address">
+                <input type="password" id="reg-password" placeholder="Password">
+                <button class="shop-btn" onclick="handleAuth('register')">Register Now</button>
+                <p>Already have an account? <span class="toggle-link" onclick="toggleForm('login')">Login here</span></p>
+            </div>
+            
+            <p id="auth-msg"></p>
+        </div>
+    </div>
+
+    <script src="auth-script.js"></script>
+</body>
+</html>

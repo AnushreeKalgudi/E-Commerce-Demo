@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHLOX | Premium Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">E-Commerce Demo</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About Us</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        
+        <div class="nav-right">
+            <span class="login" id="user-display" onclick="window.location.href='auth.html'">login</span>
+            
+            <span id="logout-btn" class="logout-link" onclick="handleLogout()" style="display: none;">logout</span>
+            
+            <span class="search-icon">🔍</span>
+            <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-text">
+                <h3>Beats Solo</h3>
+                <h1>Wireless <br>HEADPHONE</h1>
+                <button class="shop-btn">Shop By Category</button>
+            </div>
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000" alt="Beats">
+            </div>
+            <div class="hero-desc">
+                <h4>Description</h4>
+                <p>Experience high-fidelity audio with our premium wireless collection.</p>
+            </div>
+        </section>
+
+        <section class="category-grid">
+            <div class="cat-card black-card">
+                <div class="card-content">
+                    <p>Enjoy With</p>
+                    <h2>EARPHONE</h2>
+                    <button class="browse-btn">Browse</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=300" alt="Earphones">
+            </div>
+            <div class="cat-card yellow-card">
+                <div class="card-content">
+                    <p>New</p>
+                    <h2>WEARABLE</h2>
+                    <button class="browse-btn white">Browse</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt="Watch">
+            </div>
+            <div class="cat-card red-card large">
+                <div class="card-content">
+                    <p>Trend</p>
+                    <h2>LAPTOP</h2>
+                    <button class="browse-btn white">Browse</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="Laptop">
+            </div>
+            <div class="cat-card grey-card large">
+                <div class="card-content">
+                    <p>Best</p>
+                    <h2>CONSOLE</h2>
+                    <button class="browse-btn">Browse</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1605898835518-20384ec26ecf?w=500" alt="Console">
+            </div>
+            <div class="cat-card green-card">
+                <div class="card-content">
+                    <p>Play</p>
+                    <h2>OCULUS</h2>
+                    <button class="browse-btn white">Browse</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=300" alt="VR">
+            </div>
+            <div class="cat-card blue-card">
+                <div class="card-content">
+                    <p>New</p>
+                    <h2>SPEAKER</h2>
+                    <button class="browse-btn white">Browse</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=300" alt="Speaker">
+            </div>
+        </section>
+
+        <section class="best-seller">
+            <div class="section-title">
+                <h2>Best Seller Products</h2>
+                <p>Explore our most popular items from the database.</p>
+            </div>
+            <div id="products-container" class="product-grid"></div>
+        </section>
+    </main>
+
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+        </div>
+        <div id="cart-items" class="cart-items-list"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="total-price">$0.00</span>
+            </div>
+            <button class="shop-btn checkout-btn" onclick="checkout()">Checkout Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
